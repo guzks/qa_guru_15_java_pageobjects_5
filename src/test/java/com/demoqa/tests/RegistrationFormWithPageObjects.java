@@ -1,6 +1,7 @@
 package com.demoqa.tests;
 
 import com.codeborne.selenide.Configuration;
+import com.demoqa.pages.RegistrationFormPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +23,7 @@ public class RegistrationFormWithPageObjects {
 
     @Test
     void fillFormTest() {
-
+        RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
         //ввод
         $("#firstName").setValue("Bananov");
