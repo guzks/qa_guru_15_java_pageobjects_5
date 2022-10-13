@@ -9,8 +9,10 @@ import java.io.File;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$$;
 
-public class RegistrationFormTests {
+public class RegistrationFormWithPageObjects {
+
     @BeforeAll
     static void setUp() {
         Configuration.baseUrl = "https://demoqa.com";
@@ -20,9 +22,7 @@ public class RegistrationFormTests {
 
     @Test
     void fillFormTest() {
-        open("/automation-practice-form");
-        executeJavaScript("$('footer').remove()");
-        executeJavaScript("$('#fixedban').remove()");
+
 
         //ввод
         $("#firstName").setValue("Bananov");
