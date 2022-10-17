@@ -17,7 +17,7 @@ public class RegistrationFormWithPageObjects {
 
     @Test
     void fillFormTest() {
-        RegistrationFormPage.openPage()
+        registrationFormPage.openPage()
 
                 //ввод
                 .setFirstName("Bananov")

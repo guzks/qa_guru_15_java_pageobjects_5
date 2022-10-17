@@ -25,12 +25,12 @@ public class RegistrationFormPage {
             attachInput = $("#uploadPicture"),
             addressInput = $("#currentAddress"),
             submitInput = $("#submit");
-    public static RegistrationFormPage openPage() {
+    public RegistrationFormPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text(TITLE_TEXT));
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
-        return new RegistrationFormPage();
+        return this;
     }
 
     public RegistrationFormPage setFirstName(String value) {
